@@ -1,0 +1,34 @@
+
+ @mixin breakpoint($point) {
+    @if $point == desktop {
+      @media (min-width: 70em) { @content ; }
+   }
+    @else if $point == laptop {
+      @media (min-width: 64em) { @content ; }
+   }
+     @else if $point == tablet {
+      @media (min-width: 50em) { @content ; }
+   }
+    @else if $point == phablet {
+      @media (min-width: 37.5em)  { @content ; }
+   }
+   @else if $point == mobileonly {
+      @media (max-width: 37.5em)  { @content ; }
+ 
+   }
+ }
+ 
+ 
+ #demo,
+ #demo svg{
+   width: 100%;
+   @include breakpoint(laptop){
+     //width: 64em;
+   }
+   @include breakpoint(phablet){
+     //width: 37.5em;
+   }
+   max-width: 100%;
+   margin: 0 auto;
+   background-color: rgba(#ff0000, 0.2);
+ }

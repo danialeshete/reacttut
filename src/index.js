@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import VideoPlayer from './VideoPlayer';
+import Parent from './Parent';
+import Home from './Styles/Home';
 import * as serviceWorker from './serviceWorker';
+import { GuineaPigs } from './GuineaPigs/components/GuineaPigs';
+import { MousePos } from './MousePos';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MousePos/>
   </React.StrictMode>,
   document.getElementById('root')
 );
